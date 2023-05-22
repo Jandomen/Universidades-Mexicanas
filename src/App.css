@@ -1,0 +1,38 @@
+h1 {
+  color: #ffffff;
+  background: red;
+  padding: 20px;
+  text-align: center;
+  border: solid black 2px;
+}
+
+li {
+  text-align: center;
+  margin-bottom: 1em;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 20px;
+  background:greenyellow ;
+  font-size: 13px;
+  width: 60%;
+}
+
+li:hover {
+   background: #ffffff;
+   transform: scale(1.2);
+}
+
+body {
+  background: rgb(199, 183, 0);
+}
+
+ul {
+  text-align: center;
+  margin: 60px;
+}
+
+.container {
+  background-color: rgba(0, 0, 255, 0.3);
+  color: yellow;
+}
+
