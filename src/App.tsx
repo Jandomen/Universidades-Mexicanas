@@ -10,20 +10,15 @@ interface University {
 
 const App: React.FC = () => {
   const [universities, setUniversities] = useState<University[]>([]);
-
   useEffect(() => {
-    const fetchData = () => {
-      axios
-        .get("http://universities.hipolabs.com/search?country=Mexico")
-        .then((response) => {
-          setUniversities(response.data);
-        })
-        .catch((error) => {
-          console.log("Error fetching universities:", error);
-        });
-    };
-
-    fetchData();
+    axios
+      .get("http://universities.hipolabs.com/search?country=Mexico")
+      .then((response) => {
+        setUniversities(response.data);
+      })
+      .catch((error) => {
+        console.log("Error fetching universities:", error);
+      });
   }, []);
 
   return (
