@@ -1,26 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
+    "baseUrl": ".",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "incremental": true
   },
-  "include": [
-    "src",
-    "<tsconfigRootDir>/src",
-    "<tsconfigRootDir>/test",
-    "<tsconfigRootDir>/.eslintrc.js",
-    ".eslintrc.js"
- ]
+  "include": ["**/*.ts", "**/*.tsx", "lambdas.js"],
+  "exclude": ["node_modules"],
+  "typeRoots": ["./src/types"]
 }

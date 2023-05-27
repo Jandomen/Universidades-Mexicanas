@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from 'react'
-import './App.css'
-import axios from 'axios'
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import axios from "axios";
 
 interface University {
-  name: string
-  country: string
-  web_pages: string[]
+  name: string;
+  country: string;
+  web_pages: string[];
 }
 
 const App: React.FC = () => {
-  const [universities, setUniversities] = useState<University[]>([])
+  const [universities, setUniversities] = useState<University[]>([]);
 
   useEffect(() => {
-    const fetchData = async (): Promise<void> => {
-      try {
-        const response = await axios.get(
-          'http://universities.hipolabs.com/search?country=Mexico'
-        )
-        setUniversities(response.data)
-      } catch (error) {
-        console.log('Error fetching universities:', error)
-      }
-    }
-    void fetchData()
-  }, [])
+    const fetchData = () => {
+      axios
+        .get("http://universities.hipolabs.com/search?country=Mexico")
+        .then((response) => {
+          setUniversities(response.data);
+        })
+        .catch((error) => {
+          console.log("Error fetching universities:", error);
+        });
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -34,14 +35,14 @@ const App: React.FC = () => {
             <h2>{university.name}</h2>
             <p>Country: {university.country}</p>
             <p>
-              Website:{' '}
+              Website:{" "}
               <a href={university.web_pages[0]}>{university.web_pages[0]}</a>
             </p>
           </li>
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
