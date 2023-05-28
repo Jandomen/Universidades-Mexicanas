@@ -51,13 +51,22 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-config-standard": "^17.0.0",
     "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-immutable": "^1.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^16.0.0",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.5.1",
     "vue-eslint-parser": "^8.0.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/Jandomen/Universidades-Mexicanas.git",
+  "license": "MIT"
 }

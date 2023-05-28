@@ -10,4 +10,5 @@ Para ejecutar la aplicación, es necesario ejecutar el comando:
 
 yarn start
 
-Este comando ejecutará la aplicación en modo de desarrollo. La aplicación estará disponible en http://localhost:3000.
+Este comando ejecutará la aplicación en modo de desarrollo. La aplicación estará disponible en
+http://localhost:3000.
