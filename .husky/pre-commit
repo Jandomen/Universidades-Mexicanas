@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx eslint --fix --ext .tsx,.ts src/
+npx tsc --noImplicitAny
+
+echo "Ejecutando pruebas..."
+yarn test
+echo "Ejecutando linting de código..."
+yarn lint

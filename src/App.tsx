@@ -15,6 +15,7 @@ const App: React.FC = () => {
       .get('http://universities.hipolabs.com/search?country=Mexico')
       .then(response => {
         setUniversities(response.data)
+        return response.data
       })
       .catch(error => {
         console.log('Error fetching universities:', error)
