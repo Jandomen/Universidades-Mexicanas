@@ -1,13 +1,12 @@
 module.exports = {
-  ignorePatterns: ['node_modules/', 'build/', 'public/', 'src/gql/'],
   env: {
     browser: true,
     es2021: true,
     node: true
   },
   extends: [
-    'plugin:react/recommended',
     'standard',
+    'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:promise/recommended'
   ],
