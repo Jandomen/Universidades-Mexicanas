@@ -2,29 +2,29 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   extends: [
     'standard',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:promise/recommended'
+    'plugin:promise/recommended',
   ],
   settings: {
     react: {
       createClass: 'createReactClass',
       pragma: 'React',
       fragment: 'Fragment',
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: [
     'react',
@@ -34,7 +34,7 @@ module.exports = {
     'jsx-a11y',
     'promise',
     'no-loops',
-    'immutable'
+    'immutable',
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
@@ -43,15 +43,15 @@ module.exports = {
       'error',
       {
         props: 'never',
-        children: 'never'
-      }
+        children: 'never',
+      },
     ],
     'react/self-closing-comp': [
       'error',
       {
         component: true,
-        html: true
-      }
+        html: true,
+      },
     ],
     'react/jsx-no-useless-fragment': 'error',
     'func-style': ['error', 'expression'],
@@ -60,16 +60,16 @@ module.exports = {
     'react-hooks/exhaustive-deps': [
       'off',
       {
-        additionalHooks: '(useRecoilCallback|useRecoilTransaction_UNSTABLE)'
-      }
+        additionalHooks: '(useRecoilCallback|useRecoilTransaction_UNSTABLE)',
+      },
     ],
     'prefer-arrow/prefer-arrow-functions': [
       'error',
       {
         disallowPrototype: true,
         singleReturnOnly: false,
-        classPropertiesAllowed: false
-      }
+        classPropertiesAllowed: false,
+      },
     ],
     'react/jsx-sort-props': [
       'error',
@@ -77,14 +77,14 @@ module.exports = {
         callbacksLast: true,
         shorthandFirst: true,
         shorthandLast: true,
-        reservedFirst: true
-      }
+        reservedFirst: true,
+      },
     ],
     '@typescript-eslint/no-explicit-any': [
       'error',
       {
-        fixToUnknown: true
-      }
+        fixToUnknown: true,
+      },
     ],
     'react/button-has-type': 'error',
     'react/no-array-index-key': 'error',
@@ -95,6 +95,6 @@ module.exports = {
     'react/static-property-placement': 'error',
     'no-loops/no-loops': 'error',
     'immutable/no-let': 'error',
-    'immutable/no-this': 'error'
-  }
+    'immutable/no-this': 'error',
+  },
 }
