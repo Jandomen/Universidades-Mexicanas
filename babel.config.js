@@ -4,5 +4,5 @@ module.exports = {
     '@babel/preset-typescript',
   ],
 
-  ignore: ['module_node'],
+  ignore: ['module_node']
 }

@@ -18,8 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "type": "module",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "tsc",
+    "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.15.0",
     "@types/chai": "^4.3.5",
     "@types/jest": "^29.5.1",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
