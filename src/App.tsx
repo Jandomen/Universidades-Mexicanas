@@ -12,10 +12,8 @@ interface University {
 const fetcher = (url: string) => axios.get(url).then(response => response.data);
 
 const App: React.FC = () => {
-  const { data: universities, error } = useSWR<University[]>(
-    'http://universities.hipolabs.com/search?country=Mexico',
-    fetcher
-  );
+  const apiUrl = process.env.REACT_APP_API_URL || '';
+  const { data: universities, error } = useSWR<University[]>(apiUrl, fetcher);
 
   if (error) {
     console.log('Error fetching universities:', error);
@@ -25,7 +23,7 @@ const App: React.FC = () => {
     <div>
       <h1>Universidades en México</h1>
       {!universities ? (
-        <h3>Loading...</h3>
+        <p>Loading...</p>
       ) : (
         <ul>
           {universities.map(university => (
@@ -45,3 +43,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+
