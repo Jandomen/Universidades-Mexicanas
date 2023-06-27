@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist"
   },
   "include": ["**/*.ts", "**/*.tsx", "lambdas.js", "jest.config.js", "src/App.tsx", "src/App.test.tsx", "src/index.tsx"],
   "exclude": ["node_modules"],
