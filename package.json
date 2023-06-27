@@ -17,9 +17,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node api.js && react-scripts start",
     "type": "module",
-    "build": "tsc",
+    "build": "node api.js && tsc",
     "test": "jest",
     "eject": "react-scripts eject",
     "lint": "eslint .",
